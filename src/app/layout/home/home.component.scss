@@ -1,0 +1,6 @@
+@import '../../stylesConfig/stylesConfig.scss';
+
+.boton-amarillo {
+  @include btnStyle($colB: $colPrimary, $colFont: $colBlack);
+  padding: 0.5rem;
+}

@@ -1,0 +1,43 @@
+$colPrimary: #f8f76e;
+$colSecundary: #17b181;
+$colInfo: #8a72f9;
+$colSuccess:#4bcf0e;
+$colWarning: #ffce76;
+$colDanger:#ff2360;
+$colLight:#f8ede0;
+$colWhite:#ffffff;
+$colBlack:#16171a;
+
+@mixin transitionFast{
+  transition: all ease-in-out 0.3s;
+}
+
+@mixin btnStyle($colB: $colPrimary, $colFont: $colBlack) {
+  outline: none;
+  border: none;
+  background-color: $colB;
+  color: $colFont;
+  border-radius: 1rem;
+  padding-block: 0.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0px 10px 15px -5px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+  @include transitionFast;
+  &:hover{
+    transform: scale(1.05) translateY(-0.2rem);
+  }
+  &:disabled{
+    transform: none;
+    opacity: 0.7;
+  }
+
+}
+
+@mixin hoverRaised{
+  &:hover{
+    transform: scaleY(-2px);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .5);
+  }
+}
+
+
